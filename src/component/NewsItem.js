@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class NewsItem extends Component {
 
     render() {
-        console.log('NewsItem');
+        console.log('``````` NewsItem Rendered ```````');
         var { urlToImage, title, description, url } = this.props.article;
         return (
             <>

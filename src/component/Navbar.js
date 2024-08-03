@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class Navbar extends Component {
     render() {
-        console.log('Nabbar');
+        console.log('``````` Nabbar Rendered ```````');
         const { logoName } = this.props;
         return (
             <nav className="navbar navbar-expand-lg bg-body-tertiary">

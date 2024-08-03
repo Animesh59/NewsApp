@@ -5,7 +5,7 @@ import './App.css';
 
 class App extends Component {
   render() {
-    console.log('App');
+    console.log('`````` App Rendered ```````');
     return (
       <>
         <Navbar logoName="News" age="12" />
