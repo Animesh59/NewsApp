@@ -21,7 +21,7 @@ class News extends Component {
         console.log('\n\n------life cycle method------');
         // const url = `https://newsapi.org/v2/everything?q=business&pageSize=13&apiKey=4a06ae9f8783415ab54b4b5bd2f18278`;
         // const url = `https://newsapi.org/v2/top-headlines?country=us&category=entertainment&pageSize=10&apiKey=4a06ae9f8783415ab54b4b5bd2f18278`;
-        const url = `https://newsapi.org/v2/top-headlines?country=in&category=sports&pageSize=${this.state.pageSize}&page=${this.state.page}&apiKey=4a06ae9f8783415ab54b4b5bd2f18278`;
+        const url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&pageSize=${this.state.pageSize}&page=${this.state.page}&apiKey=4a06ae9f8783415ab54b4b5bd2f18278`;
         this.setState({ loading: true });
         let metaData = await fetch(url);
         let data = await metaData.json();
@@ -37,7 +37,7 @@ class News extends Component {
 
     handleNext = async () => {
         console.log('\n\nnext');
-        const url = `https://newsapi.org/v2/top-headlines?country=in&category=sports&pageSize=${this.state.pageSize}&page=${this.state.page + 1}&apiKey=4a06ae9f8783415ab54b4b5bd2f18278`;
+        const url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&pageSize=${this.state.pageSize}&page=${this.state.page + 1}&apiKey=4a06ae9f8783415ab54b4b5bd2f18278`;
         this.setState({ loading: true });
         let metaData = await fetch(url);
         let data = await metaData.json();
@@ -50,7 +50,7 @@ class News extends Component {
 
     handlePrev = async () => {
         console.log('\n\nprev');
-        const url = `https://newsapi.org/v2/top-headlines?country=in&category=sports&pageSize=${this.state.pageSize}&page=${this.state.page - 1}&apiKey=4a06ae9f8783415ab54b4b5bd2f18278`;
+        const url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&pageSize=${this.state.pageSize}&page=${this.state.page - 1}&apiKey=4a06ae9f8783415ab54b4b5bd2f18278`;
         this.setState({ loading: true });
         let metaData = await fetch(url);
         let data = await metaData.json();
